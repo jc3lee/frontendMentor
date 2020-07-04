@@ -2,4 +2,4 @@
 
 &nbsp;
 
-[Article preview component](/projects/article-preview-component-master/index.html)
+[Article preview component](/frontendmentor/projects/article-preview-component-master/index.html)
