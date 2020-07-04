@@ -2,4 +2,4 @@
 
 &nbsp;
 
-[Article preview component](/index.html)
+[Article preview component](https://ljc-dev.github.io/frontendMentor/index.html)
