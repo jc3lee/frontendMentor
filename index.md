@@ -2,4 +2,4 @@
 
 &nbsp;
 
-[Article preview component](/frontendMentor/projects/article-preview-component-master/index.html)
+[Article preview component](https://ljc-dev.github.io/frontendMentor/projects/article-preview-component-master/index.html)
