@@ -31,14 +31,14 @@
     }
 
     a {
-      text-decoration: none;
+      text-decoration: underline;
       color: black;
       font-size: 1.2rem;
     }
 
     a:hover,
-    a:focus {
-      text-decoration: underline;
+    a:focus a::before {
+      content: " ->";
     }
   </style>
 </head>
@@ -48,6 +48,7 @@
   <ul>
     <li>
       <a href="/frontendMentor/projects/article-preview-component-master/index.html">Article preview component</a>
+      <a href="/frontendMentor/projects/fylo-data-storage-component-master/index.html">Fylo data storage component</a>
     </li>
   </ul>
 </body>
