@@ -1,0 +1,210 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --card-color: rgb(24, 26, 126);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  color: #d8d8d8;
+  background: url("images/bg-mobile.png") no-repeat center;
+  background-color: rgb(2, 4, 44);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  padding: 2rem;
+  height: 100vh;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.topContainer {
+  min-width: 300px;
+  padding: 2rem;
+  background-color: var(--card-color);
+  border-radius: 8px 80px 8px 8px;
+}
+
+.logo {
+  width: 135px;
+  height: 40px;
+}
+
+.icon-document {
+  width: 20px;
+  height: 24px;
+}
+
+.icon-folder {
+  width: 24px;
+  height: 20px;
+}
+
+.icon-upload {
+  width: 24px;
+  height: 16px;
+}
+
+.btnsContainer {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.iconContainer {
+  width: 45px;
+  height: 45px;
+  border: none;
+  background: rgb(6, 6, 77);
+  border-radius: 8px;
+}
+
+.iconContainer:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.btmContainer {
+  min-width: 300px;
+  display: flex;
+  position: relative;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 2rem 2rem 3rem;
+  background-color: var(--card-color);
+  border-radius: 8px;
+}
+
+.storageInfo {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+}
+
+.storageInfo span {
+  font-weight: bold;
+}
+
+.progressOut {
+  margin-top: 1rem;
+  position: relative;
+  border-radius: 8px;
+  width: 100%;
+  height: 16px;
+  background: rgb(6, 6, 77);
+}
+
+.progressIn {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 6px;
+  width: 81.5%;
+  height: 12px;
+  background: linear-gradient(0.25turn, #EE8C68, #EB6B9D);
+  display: flex;
+}
+
+.progressBall {
+  position: absolute;
+  right: 2px;
+  top: 1px;
+  border-radius: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.valuesContainer {
+  margin-top: 0.5rem;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.valuesContainer span {
+  font-size: 0.7rem;
+}
+
+.storageLeft {
+  position: absolute;
+  bottom: -35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  background: #fff;
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.015rem;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.storageLeft span {
+  font-weight: bold;
+  font-size: 2.25rem;
+  margin-right: 0.5rem;
+  color: black;
+}
+
+@media(min-width: 850px) {
+  body {
+    background: url("images/bg-desktop.png") no-repeat bottom;
+    background-size: 100vw 50vh;
+    background-color: rgb(2, 4, 44);
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+  .container {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .topContainer {
+    width: 300px;
+  }
+  .btmContainer {
+    margin-left: 2rem;
+    width: 500px;
+  }
+  .storageInfo {
+    align-self: flex-start;
+  }
+  .storageLeft {
+    top: -35px;
+    right: 2rem;
+    bottom: auto;
+  }
+  .storageLeft::after {
+    content: "";
+    width: 28px;
+    height: 28px;
+    bottom: -14px;
+    right: 0;
+    position: absolute;
+    clip-path: polygon(100% 0%, 20% 50%, 100% 100%);
+    background: #fff;
+  }
+}
