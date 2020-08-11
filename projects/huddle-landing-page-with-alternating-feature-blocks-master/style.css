@@ -1,0 +1,507 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+body {
+  width: 100%;
+}
+
+.topContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: hsl(193, 100%, 96%);
+  background-image: url("./images/bg-hero-mobile.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+nav {
+  margin: 1rem auto 0;
+  max-width: 500px;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+nav .logo {
+  height: 20px;
+}
+
+nav .tryFree {
+  padding: 0.3rem 1.5rem 0.40rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  background: white;
+  border: none;
+  cursor: pointer;
+  color: hsl(192, 100%, 9%);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 8px -2px hsla(209, 11%, 55%, 0.356);
+  transition: transform 0.1s linear;
+}
+
+nav .tryFree:hover, nav .tryFree:focus {
+  transform: scale(1.05);
+}
+
+nav .tryFree:active {
+  transform: scale(0.95);
+}
+
+.topContent {
+  margin: 1rem auto 0;
+  max-width: 500px;
+  width: 95%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.topText {
+  width: 100%;
+  text-align: center;
+}
+
+.topText h1 {
+  margin-top: 6rem;
+  font-size: 1.8rem;
+  font-family: "Poppins", serif;
+}
+
+.topText p {
+  margin-top: 2rem;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+  font-size: 1.1rem;
+}
+
+.getStarted {
+  margin-top: 2.5rem;
+  width: 270px;
+  cursor: pointer;
+  padding: 1rem 0;
+  border-radius: 1.5rem;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  background: hsl(322, 100%, 66%);
+  font-weight: 700;
+  box-shadow: 0 4px 8px -2px hsla(209, 11%, 55%, 0.733);
+  color: hsl(193, 100%, 96%);
+  transition: transform 0.1s linear;
+}
+
+.getStarted:hover, .getStarted:focus {
+  transform: scale(1.05);
+}
+
+.getStarted:active {
+  transform: scale(0.95);
+}
+
+.topImage {
+  margin-top: 3.5rem;
+  width: 100%;
+}
+
+.topImage img {
+  width: 100%;
+}
+
+.card {
+  width: 90%;
+  max-width: 500px;
+  margin: 3rem auto 0;
+  border-radius: 12px;
+  box-shadow: 0 0 18px -5px hsla(209, 11%, 55%, 0.281);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: 3rem 2rem;
+}
+
+.card .illustration {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.card .illustration img {
+  width: 100%;
+}
+
+.card .content {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.card .content h3 {
+  font-size: 1.4rem;
+  font-family: "Poppins", serif;
+}
+
+.card .content p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: hsl(208, 11%, 55%);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.community {
+  width: 95%;
+  max-width: 450px;
+  margin: 2rem auto 0;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 18px -5px hsla(209, 11%, 55%, 0.281);
+  justify-content: center;
+  align-items: center;
+  transform: translateY(50%);
+}
+
+.community h3 {
+  font-size: 1.3rem;
+  text-align: center;
+  font-family: "Poppins", serif;
+}
+
+.community .getStarted {
+  margin-top: 1.5rem;
+}
+
+footer {
+  background-color: hsl(192, 100%, 9%);
+  width: 100%;
+  padding: 12rem 1rem 3rem;
+}
+
+.footerInner {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+}
+
+footer .logoWhite {
+  height: 30px;
+  align-self: start;
+}
+
+.cols {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-top: 2rem;
+}
+
+.col1 .contacts {
+  display: grid;
+  grid-gap: 1rem;
+  row-gap: 1.5rem;
+  grid-template-columns: 1fr auto;
+}
+
+.col1 .contacts a {
+  text-decoration: none;
+  color: white;
+}
+
+.col1 .contacts a:hover, .col1 .contacts a:hover {
+  text-decoration: underline;
+}
+
+.col1 .contacts img:first-child {
+  padding-top: 0.5rem;
+}
+
+.col2 {
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: 1.1rem;
+  margin-top: 3.5rem;
+}
+
+.col2 .groupA, .col2 .groupB {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.col2 a {
+  text-decoration: none;
+  color: white;
+}
+
+.col2 a:hover, .col2 a:focus {
+  text-decoration: underline;
+}
+
+.col2 .groupA a:not(:first-child), .col2 .groupB a {
+  margin-top: 1rem;
+}
+
+.col3 {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-top: 3.5rem;
+  align-items: center;
+}
+
+.col3 .social {
+  display: flex;
+}
+
+.col3 .social a {
+  text-decoration: none;
+  color: white;
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.1s ease;
+}
+
+.col3 .social a:hover, .col3 .social a:focus {
+  background-color: #eee;
+  color: hsl(192, 100%, 9%);
+}
+
+.col3 .social a:not(:first-child) {
+  margin-left: 1rem;
+}
+
+.col3 p {
+  margin-top: 1.5rem;
+  font-size: 0.7rem;
+}
+
+@media (min-width: 800px) {
+  .topContainer {
+    padding-top: 1.5rem;
+    padding-bottom: 4rem;
+    background-size: cover;
+    background-image: url("./images/bg-hero-desktop.svg");
+  }
+  nav {
+    max-width: 100%;
+  }
+  nav .logo {
+    height: 30px;
+  }
+  nav .tryFree {
+    padding: 0.65rem 2.5rem;
+    font-size: 1rem;
+  }
+  .topContent {
+    flex-flow: row nowrap;
+    max-width: 100%;
+    margin-top: 4rem;
+  }
+  .topText {
+    text-align: start;
+    align-self: center;
+    flex: 0.45;
+  }
+  .topText h1 {
+    margin-top: 0rem;
+    max-width: 400px;
+    line-height: 1.3;
+    font-size: 2.2rem;
+  }
+  .topText p {
+    margin-top: 1.5rem;
+    max-width: 500px;
+    line-height: 1.3;
+    font-size: 1rem;
+  }
+  .getStarted {
+    margin-top: 1.5rem;
+    width: 270px;
+    padding: 1rem 0;
+    border-radius: 1.5rem;
+    font-size: 0.8rem;
+  }
+  .topImage {
+    flex: 0.55;
+    margin-top: 0rem;
+    display: flex;
+    justify-content: end;
+  }
+  .card {
+    width: 80%;
+    max-width: 100%;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 2rem 1rem 2rem 7rem;
+  }
+  .card .illustration {
+    flex: 1;
+  }
+  .card .illustration img {
+    width: 80%;
+  }
+  .card .content {
+    margin-top: 0rem;
+    text-align: start;
+    flex: 1;
+  }
+  .card .content h3 {
+    font-size: 1.5rem;
+  }
+  .card .content p {
+    margin-top: 0.75rem;
+    max-width: 450px;
+    font-size: 1rem;
+  }
+  .card1 .illustration, .card3 .illustration {
+    order: 2;
+    justify-content: end;
+  }
+  .community {
+    width: 55%;
+    max-width: 100%;
+    padding: 2rem 1rem;
+  }
+  .community h3 {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+  }
+  .community .getStarted {
+    margin-top: 1.5rem;
+  }
+  footer {
+    padding: 11rem 1rem 3rem;
+  }
+  .footerInner {
+    max-width: 95%;
+  }
+  footer .logoWhite {
+    height: 35px;
+  }
+  .cols {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    min-height: 250px;
+  }
+  .col1 .contacts {
+    max-width: 300px;
+  }
+  .col2 {
+    margin-top: 0rem;
+  }
+  .col2 .groupB a:first-child {
+    margin-top: 1rem;
+  }
+  .col3 {
+    align-items: flex-start;
+    margin-top: 0rem;
+  }
+  .col3 .social a {
+    width: 35px;
+    height: 35px;
+  }
+  .col3 p {
+    margin-top: auto;
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  nav {
+    width: 90%;
+  }
+  nav .logo {
+    height: 35px;
+  }
+  nav .tryFree {
+    padding: 0.8rem 3.5rem;
+    font-size: 1rem;
+  }
+  .topContent {
+    flex-flow: row nowrap;
+    width: 90%;
+    margin-top: 4rem;
+  }
+  .topText {
+    text-align: start;
+    align-self: center;
+    flex: 0.45;
+  }
+  .topText h1 {
+    margin-top: 0rem;
+    max-width: 450px;
+    font-size: 2.5rem;
+  }
+  .topText p {
+    margin-top: 1.5rem;
+    max-width: 500px;
+    line-height: 1.4;
+    font-size: 1.1rem;
+  }
+  .getStarted {
+    margin-top: 2rem;
+    width: 270px;
+    padding: 1rem 0;
+    border-radius: 1.5rem;
+    font-size: 0.9rem;
+  }
+  .topImage {
+    flex: 0.55;
+    margin-top: 0rem;
+    display: flex;
+    justify-content: end;
+  }
+  .community {
+    width: 50%;
+    max-width: 100%;
+    padding: 2.5rem 1rem;
+  }
+  .community h3 {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+  }
+  .community .getStarted {
+    margin-top: 1.5rem;
+    width: 400px;
+    border-radius: 3rem;
+    font-size: 1.1rem;
+    padding: 1.5rem 0;
+  }
+  footer {
+    padding: 11rem 1rem 3rem;
+  }
+  .footerInner {
+    max-width: 90%;
+  }
+  footer .logoWhite {
+    height: 40px;
+  }
+  .col1 .contacts {
+    max-width: 350px;
+  }
+  .col2 {
+    flex-flow: row nowrap;
+    flex: auto;
+    justify-content: space-evenly;
+  }
+  .col2 .groupB a:first-child {
+    margin-top: 0rem;
+  }
+  .col3 p {
+    margin-top: auto;
+    font-size: 0.8rem;
+  }
+}
