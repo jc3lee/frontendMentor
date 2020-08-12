@@ -9,6 +9,72 @@ body {
   width: 100%;
 }
 
+/* 
+  The design is mobile first, it's a recommended practice. The media queries hold values for PC and tablets versions.
+
+  The cards are similar so I group them in a card class. I added card1, card2 & card3 to be able to select a specific card later on to switch the order between image and text 
+
+  cards have a flex display
+
+  To align the content of each card in columns I used
+  flex-flow: column nowrap;  
+  but u can also use flex-direction: column
+
+  Inside media query I switched from column to row with
+  flex-flow: row nowrap;  
+
+  Children of flex elements have an order property. Setting an order number bigger than there current one place them after so that's how we move them after the text.
+  
+  For footer 
+  The logo is at the top and separate from the columns logic. U have to go inside logo.svg and change all the path fill values to white to get this white logo
+  
+  all the cols are too different to use a single class. Hence col1, col2 & col3. 
+  col1 contains contacts 
+  col2 contains groupA (About Us, What We Do, FAQ) & groupB (Career, Blog, Contact Us)
+  col3 contains the social icons and the copyright
+
+  The key is to group them together in a cols class with a flex display. And then use
+  flex-flow: column nowrap; 
+  to display in columns for mobile.
+  In media query for tablets and pc, switch to
+  flex-flow: row nowrap;
+
+  col2 contains groupA (About Us, What We Do, FAQ) & groupB (Career, Blog, Contact Us)
+  the reason they were separate into two groups is because on mobile version they are all aligned one above the other but on PC they are side by side
+
+  Same process
+  Make col2 display flex
+  On mobile use
+  flex-flow: column nowrap;
+  And on PC use
+    flex-flow: row nowrap;
+  So that the groups are side by side.
+
+  This is all the logic to switch between row and columns.
+
+  Now for details
+
+  In col1 the contacts class has a display grid
+  It's the easiest way to make a table like design.
+  the icons are on the left and the text on the right
+  This line defines the size and amount of columns
+  grid-template-columns: 1fr auto;
+  The icons have a width of 1fr, fr stands for fraction. It's a grid measure standard
+  https://css-tricks.com/introduction-fr-css-unit/
+  U don't need to use that, u could use a % or px
+  The contacts text have a width of auto, so they'll the place available.
+  U don't need to learn grid for now. It's more important to learn flex well which is used in 99% of the cases.
+
+  One crucial thing to understand with flex is how to center or align start/end the items within it.
+  It's done with justify-content and align-items.
+  When the flex direction is row
+  justify-content affects how things look on the X axis
+  & align-items on the Y axis.
+  When the flex direction is column
+  justify-content affects how things look on the Y axis
+  & align-items on the X axis.
+  */
+
 .topContainer {
   display: flex;
   flex-flow: column nowrap;
