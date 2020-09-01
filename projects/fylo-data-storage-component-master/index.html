@@ -5,77 +5,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
-  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Fylo data storage component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      position: absolute;
-      bottom: 10px;
-      font-size: 11px;
-      width: 100%;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  <div class="container">
-    <div class="topContainer">
-      <img class="logo" src="images/logo.svg" alt="logo fylo">
-      <div class="btnsContainer">
-
-        <button class="iconContainer">
-
-          <img class="icon-document" src="images/icon-document.svg" alt="document">
+<body
+  class="relative bg-primary-vdark bg-main-mobile bg-center bg-no-repeat lg:bg-main-desktop lg:h-screen lg:bg-bottom lg:bg-primary-vdark flex justify-center items-center bg-y-auto lg:bg-y-50">
+  <div class="py-24 px-6 max-w-lg lg:max-w-screen-xl lg:w-3/4 mx-auto flex flex-col lg:flex-row lg:space-x-8 ">
+    <div
+      class=" lg:flex-2  flex flex-col justify-center space-y-10 h-56 rounded-lg roundedFyloRight  bg-primary-card p-12 lg:max-w-sm">
+      <img src="./images/logo.svg" alt="logo" class="self-start">
+      <div class="flex space-x-4">
+        <button
+          class="bg-primary-vdark w-12 h-12 rounded-lg flex justify-center items-center btnDoc bg-center bg-no-repeat">
         </button>
-        <button class="iconContainer">
-          <img class="icon-folder" class="logo" src="images/icon-folder.svg" alt="folder">
-
+        <button
+          class="bg-primary-vdark w-12 h-12 rounded-lg flex justify-center items-center btnFolder bg-center bg-no-repeat">
         </button>
-        <button class="iconContainer">
-          <img class="icon-upload" class="logo" src="images/icon-upload.svg" alt="upload">
+        <button
+          class="bg-primary-vdark w-12 h-12 rounded-lg flex justify-center items-center btnUpload bg-center bg-no-repeat">
         </button>
       </div>
     </div>
-
-    <div class="btmContainer">
-      <p class="storageInfo">
-        You’ve used <span>815 GB</span> of your storage
-      </p>
-
-      <div class="progressOut">
-        <div class="progressIn">
-          <div class="progressBall"></div>
+    <div
+      class="relative p-8 bg-primary-card pb-16 lg:self-end lg:pb-8 text-center lg:text-left rounded-lg mt-4 font-raleway lg:flex-4 mb-20 lg:mb-0">
+      <h3 class="text-primary-pale"> You’ve used <b class="text-blue-100">815 GB</b> of your storage</h3>
+      <div class=" bg-primary-vdark h-4 w-full mt-4 rounded-full flex items-center">
+        <div
+          class="h-3 w-3/4 rounded-full bg-gradient-to-r from-primary-progress-start to-primary-progress-end flex justify-end items-center ">
+          <div class="h-2 w-2 mr-1 bg-white rounded-full"></div>
         </div>
       </div>
-      <div class="valuesContainer">
-        <p>
-          <span>0</span> GB
-        </p>
-        <p>
-          <span>1000</span> GB
-        </p>
+      <div class="flex text-primary-pale justify-between font-bold mt-2">
+        <p>0 GB</p>
+        <p>1000 GB</p>
       </div>
-      <div class="storageLeft">
-        <span>185 </span>GB Left
+      <div
+        class="w-56 flex absolute justify-center items-center bg-white rounded-lg p-2 font-raleway bottom-0 left-50 transform -translate-x-1/2 translate-y-1/2 lg:-translate-x-8 lg:-translate-y-16 lg:bottom-auto lg:left-auto lg:top-0 lg:right-0 lg:afterMe lg:rounded-r-none">
+        <span class="text-5xl font-bold">185</span> <span class="ml-2 text-primary-grayish font-bold">GB LEFT</span>
       </div>
     </div>
   </div>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://www.youtube.com/watch?v=PDSkFeMVNFs" target="_blank">Radwimps</a> fan.
-  </div>
 
+  <div class="attribution text-xs text-white text-center absolute left-0 bottom-0 mb-2 w-full">
+    Coded by <a href="https://www.youtube.com/watch?v=PDSkFeMVNFs" target="_blank">Radwimps</a> fan.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
 </body>
 
 </html>
