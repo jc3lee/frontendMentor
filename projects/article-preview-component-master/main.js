@@ -1,34 +1,10 @@
-const shareCard = document.getElementById("shareCard")
-const shareToggleBtn = document.getElementById("shareToggleBtn")
-const mySVGPath = document.getElementById("myPathID")
+const shareBtn = document.querySelector(".shareBtn")
+const shareContainer = document.querySelector(".shareContainer")
 
-const showShare = () => {
-  shareCard.classList.add("showcardFooterFront")
-  shareToggleBtn.classList.add("shareDark")
-  mySVGPath.classList.add("myPathLight")
+shareBtn.addEventListener("click", toggleShare)
+
+
+function toggleShare() {
+  shareBtn.classList.toggle("shareBtnActive")
+  shareContainer.classList.toggle("shareContainerActive")
 }
-const hideShare = () => {
-  shareCard.classList.remove("showcardFooterFront")
-  shareToggleBtn.classList.remove("shareDark")
-  mySVGPath.classList.remove("myPathLight")
-}
-
-const toggleShare = e => {
-  e.stopPropagation()
-  if (shareCard.classList.contains("showcardFooterFront")) {
-    hideShare()
-  } else {
-    showShare()
-  }
-}
-
-const hideShareIfOpened = () => {
-  if (shareCard.classList.contains("showcardFooterFront")) {
-    hideShare()
-  }
-}
-
-shareToggleBtn.addEventListener("click", toggleShare)
-
-document.addEventListener("click", hideShareIfOpened)
-
