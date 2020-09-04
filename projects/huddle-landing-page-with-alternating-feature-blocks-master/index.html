@@ -7,127 +7,124 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <script src="https://kit.fontawesome.com/3a02f6f657.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styleTail.css">
   <title>Frontend Mentor | Huddle landing page with alternating feature blocks</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution {
-      font-size: 12px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
+    * {
+      /* border: 1px solid red; */
     }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="topContainer">
-    <nav>
-      <img src="./images/logo.svg" alt="logo" class="logo">
-      <button class="tryFree">Try It Free</button>
+  <div
+    class="px-4 py-8 lg:px-16 bg-hero-mobile lg:bg-hero-desktop bg-cover lg:bg-contain lg:h-screen bg-no-repeat bg-blue-100">
+    <nav class="flex justify-between items-end">
+      <img src="./images/logo.svg" alt="logo" class="h-5 lg:h-6">
+      <button class="rounded-full py-1 px-6 lg:py-3 lg:px-12 shadow-md font-open-sans text-xs bg-white font-bold">Try It
+        Free</button>
     </nav>
-    <div class="topContent">
-      <div class="topText">
-        <h1>Build The Community Your Fans Will Love</h1>
-        <p>Huddle re-imagines the way we build communities. You have a voice, but so does your audience.
-          Create connections with your users as you engage in genuine discussion.</p>
-        <button class="getStarted">Get Started For Free</button>
+    <div class="text-center lg:flex lg:items-center lg:mt-16 max-w-xl mx-auto lg:max-w-none">
+      <div class="lg:text-left ">
+        <h1 class="font-poppins text-3xl mt-32  lg:max-w-sm lg:mt-0 ">Build The Community Your Fans Will Love</h1>
+        <p class="font-open-sans text-lg lg:text-base mt-6 lg:max-w-xl lg:mr-8">
+          Huddle re-imagines the way we build communities. You have a voice, but so does your audience.
+          Create connections with your users as you engage in genuine discussion.
+        </p>
+        <button
+          class="rounded-full px-20 py-4 bg-primary font-open-sans text-white font-bold mt-10 text-sm tracking-wide pink-shadow">Get
+          Started For
+          Free</button>
       </div>
-      <div class="topImage">
-        <img src="./images/illustration-mockups.svg" alt="mockups" class="mockups">
+      <img src="./images/illustration-mockups.svg" class="px-3 mt-16 lg:mt-0 w-2/3 min-w-0 mx-auto" alt="mockups">
+    </div>
+  </div>
+
+  <div class="lg:px-24 px-6 pt-16 pb-4 space-y-12 max-w-xl mx-auto lg:max-w-none">
+    <div class="card grid grid-cols-1 p-12 lg:grid-cols-2 lg:pl-24 ">
+      <img src="./images/illustration-grow-together.svg" alt="grow"
+        class=" lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:w-9/12 lg:ml-auto">
+      <div class="mt-16 text-center lg:text-left lg:col-start-1 lg:col-end-2 lg:row-start-1">
+        <h3 class="text-2xl font-bold font-poppins">Grow Together</h3>
+        <p class="mt-4 font-open-sans text-gray-600 ">Generate meaningful discussions with your audience and
+          build a
+          strong, loyal
+          community.
+          Think of the insightful conversations you miss out on with a feedback form.</p>
       </div>
     </div>
+    <div class="card grid grid-cols-1 p-12 lg:grid-cols-2 lg:pl-24">
+      <img src="./images/illustration-flowing-conversation.svg" alt="flowing" class="  lg:w-9/12 ">
+      <div class="mt-16 text-center lg:text-left">
+        <h3 class="text-2xl font-bold font-poppins">Flowing Conversations</h3>
+        <p class="mt-4 font-open-sans text-gray-600">You wouldn't paginate a conversation in real life, so why do it
+          online? Our threads
+          have just-in-time loading for a more natural flow.</p>
+      </div>
+    </div>
+    <div class="card grid grid-cols-1 p-12 lg:grid-cols-2 lg:pl-24">
+      <img src="./images/illustration-your-users.svg" alt="users"
+        class=" lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:w-9/12 lg:ml-auto">
+      <div class="mt-16 text-center lg:text-left lg:col-start-1 lg:col-end-2 lg:row-start-1">
+        <h3 class="text-2xl font-bold font-poppins">Your Users</h3>
+        <p class="mt-4 font-open-sans text-gray-600">It takes no time at all to integrate Huddle with your app's
+          authentication solution.
+          This means, once signed in to your app, your users can start chatting immediately.</p>
+      </div>
+    </div>
+    <div
+      class="text-center card py-10 lg:w-2/3 lg:max-w-3xl lg:py-12 relative transform translate-y-24 bg-white mx-auto">
+      <h3 class="text-xl font-bold font-poppins mt-4 lg:text-3xl ">Ready To Build Your Community?</h3>
+      <button
+        class="rounded-full px-12 lg:px-20 py-3  lg:py-6 lg:text-base bg-primary font-open-sans text-gray-100 font-bold mt-6 lg:mt-8 text-xs tracking-wide lg:tracking-wider  black-shadow">Get
+        Started For Free</button>
+    </div>
+  </div>
+  <div class="bg-neutral-cyan-dark text-white pt-40 px-4 pb-16 ">
+    <div class="max-w-xl mx-auto lg:max-w-none">
 
-  </div>
-
-  <div class="card card1">
-    <div class="illustration">
-      <img src="./images/illustration-grow-together.svg" alt="grow together">
-    </div>
-    <div class="content">
-      <h3>Grow Together</h3>
-      <p>Generate meaningful discussions with your audience and build a strong, loyal community.
-        Think of the insightful conversations you miss out on with a feedback form.</p>
-    </div>
-  </div>
-  <div class="card card2">
-    <div class="illustration">
-      <img src="./images/illustration-flowing-conversation.svg" alt="flowing conversations">
-    </div>
-    <div class="content">
-      <h3>Flowing Conversations</h3>
-      <p>You wouldn't paginate a conversation in real life, so why do it online? Our threads
-        have just-in-time loading for a more natural flow.</p>
-    </div>
-  </div>
-  <div class="card card3">
-    <div class="illustration">
-      <img src="./images/illustration-your-users.svg" alt="flowing conversations">
-    </div>
-    <div class="content">
-      <h3>Your Users</h3>
-      <p>It takes no time at all to integrate Huddle with your app's authentication solution.
-        This means, once signed in to your app, your users can start chatting immediately.</p>
-    </div>
-  </div>
-
-  <div class="community">
-    <h3>Ready To Build Your Community?</h3>
-    <button class="getStarted">Get Started For Free</button>
-  </div>
-
-  <footer>
-    <div class="footerInner">
-      <img src="./images/logo-white.svg" alt="huddle" class="logoWhite">
-      <div class="cols">
-        <div class="col1">
-          <div class="contacts">
-            <img src="./images/icon-location.svg" alt="location">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua
-            </p>
-            <img src="./images/icon-phone.svg" alt="phone">
-            <a href="#">+1-543-123-4567</a>
-            <img src="./images/icon-email.svg" alt="email">
-            <a href="#">example@huddle.com</a>
-          </div>
+      <img src="./images/logoWhite.svg" alt="logo" class=" mb-6 lg:mb-10 h-8">
+      <div class="lg:grid lg:grid-cols-10">
+        <div class="grid grid-cols-10 gap-y-6 gridy font-open-sans text-lg lg:text-base lg:col-span-3">
+          <img src="./images/icon-location.svg" alt="location" class="col-span-1 mt-2">
+          <p class="col-span-9">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua</p>
+          <img src="./images/icon-phone.svg" alt="phone" class="col-span-1 self-end lg:self-start lg:mt-1">
+          <p class="col-span-9">
+            +1-543-123-4567</p>
+          <img src="./images/icon-email.svg" alt="mail" class="col-span-1 self-center lg:self-start lg:mt-2">
+          <p class="col-span-9">
+            example@huddle.com</p>
         </div>
-        <div class="col2">
-          <div class="groupA">
+        <div class="mt-12 lg:mt-0 text-xl space-y-5 lg:space-y-0 lg:flex lg:col-span-4 lg:ml-16">
+          <div class="flex flex-col space-y-5 lg:flex-1">
             <a href="#">About Us</a>
             <a href="#">What We Do</a>
             <a href="#">FAQ</a>
           </div>
-          <div class="groupB">
+          <div class="flex flex-col space-y-5 lg:flex-1">
             <a href="#">Career</a>
             <a href="#">Blog</a>
             <a href="#">Contact Us</a>
           </div>
         </div>
-        <div class="col3">
-          <div class="social">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+        <div class="text-center mt-12 lg:mt-0 lg:text-left lg:flex lg:flex-col lg:col-span-3">
+          <div class="flex justify-center lg:justify-start space-x-4">
+            <a href="#" class="border rounded-full flex justify-center items-center w-8 h-8 "><img class="w-4"
+                src="./images/facebook.svg" alt="facebook"></a>
+            <a href="#" class="border rounded-full flex justify-center items-center w-8 h-8 "><img class="w-4"
+                src="./images/twitter.svg" alt="twitter"></a>
+            <a href="#" class="border rounded-full flex justify-center items-center w-8 h-8 "><img class="w-4"
+                src="./images/insta.svg" alt="insta"></a>
           </div>
-          <p>&copy; Copyright 2020 Huddle. All rights reserved.</p>
+          <p class="text-xs mt-6 lg:mt-48 ">&copy; Copyright 2018 Huddle. All rights reserved.</p>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
 
-
-  <p class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://www.youtube.com/watch?v=a2GujJZfXpg">Your Name - Radwimps</a>.
-  </p>
 </body>
 
 </html>

@@ -9,81 +9,126 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Article preview component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
   <style>
-    .attribution {
-      margin-top: 2rem;
-      font-size: 11px;
-      text-align: center;
+    .shareBtn {
+      background-image: url("./images/icon-share.svg");
+      background-position: center;
+      background-size: 15px;
+      transition: background-color 0.15s ease-out;
     }
 
-    .attribution a {
-      color: hsl(228, 45%, 44%);
+    .shareBtnActive {
+      background-image: url("./images/icon-share-active.svg");
+      background-color: hsl(214, 17%, 51%);
+    }
+
+    body {
+      background-color: #e8eff7;
+    }
+
+    .outerContainer {
+      width: 85vw;
+      max-width: 400px;
+      min-width: 350px;
+      box-shadow: 0 3rem 55px -15px hsla(217, 19%, 35%, 0.103);
+    }
+
+    .shareText {
+      letter-spacing: 0.3rem;
+    }
+
+    .shareContainer {
+      transform: translateY(100%);
+      transition: transform 0.15s ease-out;
+    }
+
+    .shareContainerActive {
+      transform: translateY(0);
+    }
+
+    @media (min-width:1024px) {
+      .outerContainer {
+        max-width: 700px;
+        min-width: 700px;
+        box-shadow: 0 2rem 35px -8px hsla(217, 19%, 35%, 0.123);
+      }
+
+      .imgContainer {
+        flex: 1 0 265px;
+      }
+
+      .shareContainer {
+        opacity: 0;
+        transform: translate(calc(50% - 3.5rem), -50%);
+        top: 0;
+        box-shadow: 0 3px 8px 2px hsla(217, 19%, 35%, 0.15);
+        right: 0;
+        transition: all 0.15s ease-out;
+      }
+
+      .shareContainer::after {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%) rotate(45deg);
+        box-shadow: 0 3px 8px 2px hsla(217, 19%, 35%, 0.15);
+        content: " ";
+        width: 1rem;
+        height: 1rem;
+        background: hsla(217, 19%, 35%);
+      }
+
+      .shareContainerActive {
+        transform: translate(calc(50% - 3.5rem), -120%);
+        opacity: 1;
+      }
     }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="card">
-    <div class="cardTop">
-      <img src="images/drawers.jpg" alt="drawers">
+  <div
+    class="outerContainer rounded-lg mx-auto mt-16 mb-24 flex flex-col lg:flex-row bg-white overflow-hidden lg:overflow-visible">
+    <div class="h-64 lg:h-auto imgContainer">
+      <img class="w-full h-full object-cover min-w-0 lg:object-left lg:rounded-l-lg" src="./images/drawers.jpg"
+        alt="cover">
     </div>
-    <div class="cardBody">
-      <div class="cardMain">
-        <h1>
+    <div class="font-manrope">
+      <div class="px-8">
+        <h3 class="text-base lg:text-xl font-bold leading-7 mt-10 lg:mt-6 text-primary-very-dark">
           Shift the overall look and feel by adding these wonderful
-          touches to furniture in your home
-        </h1>
-        <p>
-          Ever been in a room and felt like something was missing? Perhaps
+          touches to furniture in your home</h3>
+        <p class="mt-4 lg:mt-2 lg:mr-2 text-sm lg:text-xs leading-6 lg:leading-5 text-primary-desaturated">Ever been in
+          a room
+          and felt like
+          something was
+          missing? Perhaps
           it felt slightly bare and uninviting. I’ve got some simple tips
-          to help you make any room feel complete.
-        </p>
-
+          to help you make any room feel complete.</p>
       </div>
-      <div class="cardFooter">
-        <div class="cardFooterBack">
-          <img class="avatar" src="images/avatar-michelle.jpg" alt="michelle">
-          <div class="cardFooterMiddle">
-            <p class="author">
-              Michelle Appleton
-            </p>
-            <p class="date">
-              28 Jun 2020
-            </p>
-          </div>
+      <div class=" relative flex px-8 mt-6 lg:mt-2 pt-3 pb-5 lg:pb-8">
+        <img src="./images/avatar-michelle.jpg" alt="avatar michelle" class="w-10 h-10 rounded-full">
+        <div class="ml-5">
+          <a href="#"
+            class="text-primary-very-dark text-sm lg:text-xs font-bold hover:underline focus:underline">Michelle
+            Appleton</a>
+          <p class="text-primary-grayish text-sm lg:text-xs">28 Jun 2020</p>
         </div>
-        <div class="cardFooterFront" id="shareCard">
-          <p class="shareDesc">share</p>
-          <a class="social" href="#">
-            <img src="images/icon-facebook.svg" alt="facebook">
-          </a>
-          <a class="social" href="#">
-            <img src="images/icon-twitter.svg" alt="twitter">
-          </a>
-          <a class="social" href="#">
-            <img src="images/icon-pinterest.svg" alt="pinterest">
-          </a>
+        <button
+          class="absolute w-8 h-8 shareBtn bg-primary-light rounded-full bottom-0 right-0 mr-6 mb-6 lg:mb-8 lg:mr-10 bg-no-repeat z-50"></button>
+        <div
+          class="absolute flex inset-0 lg:inset-auto bg-primary-very-dark items-center px-8 space-x-4 shareContainer lg:py-4 lg:rounded-lg">
+          <p class="mr-1 shareText uppercase text-primary-grayish text-sm lg:text-xs">Share</p>
+          <a href="#">
+            <img src="./images/icon-facebook.svg" alt="facebook"></a>
+          <a href="#">
+            <img src="./images/icon-twitter.svg" alt="twitter"></a>
+          <a href="#">
+            <img src="./images/icon-pinterest.svg" alt="pinterest"></a>
         </div>
-        <button class="share" id="shareToggleBtn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
-            <path id="myPathID" class="myPath"
-              d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z" />
-          </svg>
-        </button>
       </div>
     </div>
-
-
-  </div>
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Sunset Daisy</a>.
   </div>
   <script src="main.js"></script>
 </body>
