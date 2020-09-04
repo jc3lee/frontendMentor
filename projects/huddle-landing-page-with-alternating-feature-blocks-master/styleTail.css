@@ -901,6 +901,14 @@ img, video {
   color: rgba(113, 128, 150, var(--text-opacity));
 }
 
+.hover\:underline:hover {
+  text-decoration: underline;
+}
+
+.focus\:underline:focus {
+  text-decoration: underline;
+}
+
 .tracking-wide {
   letter-spacing: 0.025em;
 }
@@ -947,6 +955,11 @@ img, video {
   --transform-scale-x: 1;
   --transform-scale-y: 1;
   transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+}
+
+.active\:scale-95:active {
+  --transform-scale-x: .95;
+  --transform-scale-y: .95;
 }
 
 .translate-y-24 {
